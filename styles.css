@@ -310,6 +310,102 @@ section {
     line-height: 1.8;
 }
 
+/* Experience Section */
+.experience {
+    background: var(--bg-color);
+}
+
+.experience-timeline {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    position: relative;
+}
+
+.experience-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.experience-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 2rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: 3px solid var(--bg-color);
+    box-shadow: 0 0 0 3px var(--primary-color);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.experience-header h3 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 0;
+}
+
+.experience-date {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.experience-company {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.experience-bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.experience-bullets li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.experience-bullets li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
 /* Skills Section */
 .skills {
     background: var(--bg-light);
