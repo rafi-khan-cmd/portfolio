@@ -386,24 +386,26 @@ section {
 }
 
 .section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 800;
     margin-bottom: 1rem;
     text-align: center;
     position: relative;
     color: var(--text-color);
+    letter-spacing: -0.02em;
 }
 
-.section-title::after {
+.section-title::before {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border-radius: 2px;
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    border-radius: 3px;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
 }
 
 .section-subtitle {
@@ -418,7 +420,18 @@ section {
 
 /* About Section */
 .about {
-    background: var(--bg-color);
+    background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-light) 100%);
+    position: relative;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
 }
 
 .about-content {
@@ -606,16 +619,19 @@ section {
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: transform 0.2s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
 }
 
 .skill-tag:hover {
-    transform: scale(1.05);
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.5);
 }
 
 /* Projects Section */
 .projects {
-    background: var(--bg-color);
+    background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-color) 100%);
+    position: relative;
 }
 
 .projects-grid {
@@ -737,30 +753,56 @@ section {
     padding: 0.4rem 0.8rem;
     background: var(--bg-light);
     color: var(--primary-color);
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 0.85rem;
     font-weight: 500;
     border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(99, 102, 241, 0.3);
 }
 
 .project-link {
     display: inline-block;
     margin-top: 1rem;
-    padding: 12px 24px;
+    padding: 14px 24px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
     width: 100%;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.project-link:hover::before {
+    left: 100%;
 }
 
 .project-link:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
 }
 
