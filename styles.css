@@ -5,20 +5,20 @@
 }
 
 :root {
-    --primary-color: #6366f1;
-    --primary-dark: #4f46e5;
-    --secondary-color: #8b5cf6;
-    --accent-color: #ec4899;
+    --primary-color: #06b6d4;
+    --primary-dark: #0891b2;
+    --secondary-color: #3b82f6;
+    --accent-color: #8b5cf6;
     --text-color: #1f2937;
     --text-light: #6b7280;
     --bg-color: #ffffff;
-    --bg-light: #f9fafb;
-    --bg-dark: #111827;
+    --bg-light: #f0f9ff;
+    --bg-dark: #0c4a6e;
     --card-bg: #ffffff;
-    --border-color: #e5e7eb;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --border-color: #e0f2fe;
+    --shadow: 0 4px 6px -1px rgba(6, 182, 212, 0.1), 0 2px 4px -1px rgba(6, 182, 212, 0.06);
+    --shadow-lg: 0 20px 25px -5px rgba(6, 182, 212, 0.15), 0 10px 10px -5px rgba(6, 182, 212, 0.08);
+    --shadow-xl: 0 25px 50px -12px rgba(6, 182, 212, 0.25);
     --glass-bg: rgba(255, 255, 255, 0.7);
 }
 
@@ -108,7 +108,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
     position: relative;
     overflow: hidden;
     padding-top: 80px;
@@ -135,7 +135,7 @@ body {
 .orb-1 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.8), rgba(139, 92, 246, 0.4));
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.8), rgba(59, 130, 246, 0.4));
     top: -200px;
     left: -200px;
     animation-delay: 0s;
@@ -144,7 +144,7 @@ body {
 .orb-2 {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(236, 72, 153, 0.8), rgba(139, 92, 246, 0.4));
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.8), rgba(139, 92, 246, 0.4));
     bottom: -150px;
     right: -150px;
     animation-delay: 5s;
@@ -153,7 +153,7 @@ body {
 .orb-3 {
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.6), rgba(236, 72, 153, 0.3));
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.6), rgba(139, 92, 246, 0.3));
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -405,7 +405,7 @@ section {
     height: 5px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
     border-radius: 3px;
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
 }
 
 .section-subtitle {
@@ -620,12 +620,12 @@ section {
     font-size: 0.9rem;
     font-weight: 500;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 2px 8px rgba(6, 182, 212, 0.3);
 }
 
 .skill-tag:hover {
     transform: scale(1.08) translateY(-2px);
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.5);
 }
 
 /* Projects Section */
@@ -765,7 +765,7 @@ section {
     color: white;
     border-color: var(--primary-color);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 4px 8px rgba(6, 182, 212, 0.3);
 }
 
 .project-link {
@@ -780,7 +780,7 @@ section {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
     width: 100%;
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
     position: relative;
     overflow: hidden;
 }
@@ -802,7 +802,7 @@ section {
 
 .project-link:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 8px 25px rgba(6, 182, 212, 0.5);
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
 }
 
