@@ -490,6 +490,27 @@ section {
     border: 1px solid var(--border-color);
 }
 
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+
+.project-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+}
+
 /* Contact Section */
 .contact {
     background: var(--bg-light);
