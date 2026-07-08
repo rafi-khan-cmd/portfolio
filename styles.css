@@ -155,16 +155,6 @@ section {
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.02em;
-    display: flex;
-    align-items: center;
-    gap: 0.55rem;
-}
-
-.nav-brand .dot {
-    width: 9px;
-    height: 9px;
-    background: var(--accent);
-    display: inline-block;
 }
 
 .nav-links {
