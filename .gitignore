@@ -12,3 +12,6 @@ Thumbs.db
 # Logs
 *.log
 
+# Private project review (not for publishing)
+_review/
+

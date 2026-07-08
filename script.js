@@ -1,98 +1,108 @@
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const offsetTop = target.offsetTop - 80;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
+// ==========================================================================
+// Portfolio interactions
+// ==========================================================================
 
-// Navbar background on scroll
-const navbar = document.querySelector('.navbar');
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+// --- Navbar background on scroll ---------------------------------------------
+const navbar = document.getElementById("navbar");
+const onScrollNav = () => {
+    if (window.scrollY > 24) {
+        navbar.classList.add("scrolled");
     } else {
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+        navbar.classList.remove("scrolled");
     }
-    
-    lastScroll = currentScroll;
-});
+};
+window.addEventListener("scroll", onScrollNav, { passive: true });
+onScrollNav();
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+// --- Mobile menu toggle ------------------------------------------------------
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
+
+const closeMenu = () => {
+    navToggle.classList.remove("open");
+    navLinks.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
 };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
+navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    navToggle.classList.toggle("open", isOpen);
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+});
 
-// Observe all sections and project cards
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section');
-    const projectCards = document.querySelectorAll('.project-card');
-    const skillCategories = document.querySelectorAll('.skill-category');
-    
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-    
-    projectCards.forEach(card => {
-        observer.observe(card);
-    });
-    
-    skillCategories.forEach(category => {
-        observer.observe(category);
+navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+});
+
+// --- Smooth scroll with navbar offset ----------------------------------------
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+        const targetId = this.getAttribute("href");
+        if (targetId === "#" || targetId.length < 2) return;
+        const target = document.querySelector(targetId);
+        if (!target) return;
+        e.preventDefault();
+        const offset = target.getBoundingClientRect().top + window.scrollY - 76;
+        window.scrollTo({ top: offset, behavior: "smooth" });
     });
 });
 
-// Hide project links if they point to placeholder URLs
-document.querySelectorAll('.project-icon').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && (href.includes('your-project-link.com') || href.includes('github.com') && !href.includes('/yourusername'))) {
-        // Keep the link but you can style it differently if needed
-        // Or hide it: link.style.display = 'none';
-    }
-});
-
-// Add active state to navigation links based on scroll position
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-
-window.addEventListener('scroll', () => {
-    let current = '';
-    const scrollPosition = window.pageYOffset + 100;
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
+// --- Mailto links ------------------------------------------------------------
+document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+        event.stopPropagation();
+        const href = link.getAttribute("href");
+        if (!href) return;
+        window.location.href = href;
     });
 });
 
+// --- Scroll reveal animations ------------------------------------------------
+const revealEls = document.querySelectorAll("[data-reveal]");
+const revealObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
+);
+
+// Stagger reveals that share a parent grid/timeline for a cascade effect.
+const staggerGroups = document.querySelectorAll(
+    ".projects-grid, .skills-grid, .timeline, .hero-inner, .hero-meta, .contact-socials"
+);
+staggerGroups.forEach((group) => {
+    const items = group.querySelectorAll(":scope > [data-reveal]");
+    items.forEach((item, i) => {
+        item.style.transitionDelay = `${Math.min(i * 80, 400)}ms`;
+    });
+});
+
+revealEls.forEach((el) => revealObserver.observe(el));
+
+// --- Active nav link based on scroll position --------------------------------
+const sections = document.querySelectorAll("section[id], header[id]");
+const navAnchors = document.querySelectorAll(".nav-links a");
+
+const setActiveLink = () => {
+    const pos = window.scrollY + 120;
+    let current = "";
+    sections.forEach((section) => {
+        if (pos >= section.offsetTop) {
+            current = section.getAttribute("id");
+        }
+    });
+    navAnchors.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
+    });
+};
+window.addEventListener("scroll", setActiveLink, { passive: true });
+setActiveLink();
+
+// --- Footer year -------------------------------------------------------------
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();

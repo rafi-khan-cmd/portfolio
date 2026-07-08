@@ -3,430 +3,515 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rafiul Alam Khan - Computer Science Honors Student Portfolio showcasing projects, skills, and experience">
-    <title>Rafiul Alam Khan | Portfolio</title>
+    <meta name="description" content="Rafiul Alam Khan. Computer Science Honors student at the University of Alberta focused on machine learning, AI, optimization, and data.">
+    <meta name="author" content="Rafiul Alam Khan">
+    <meta property="og:title" content="Rafiul Alam Khan | Machine Learning & Data">
+    <meta property="og:description" content="Computer Science Honors student building machine learning, AI, optimization, and data-driven systems.">
+    <meta property="og:type" content="website">
+    <title>Rafiul Alam Khan — Machine Learning &amp; Data</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="nav-brand">Rafiul Alam Khan</div>
-            <ul class="nav-links">
+            <a href="#top" class="nav-brand">Rafiul Alam Khan<span class="dot"></span></a>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#credentials">Credentials</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-background">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
-        </div>
+    <!-- Hero -->
+    <header class="hero" id="top">
+        <div class="hero-glow"></div>
+        <div class="hero-grid"></div>
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">CS Honors Student</div>
-                <h1 class="hero-title">
-                    <span class="hero-name">Rafiul Alam Khan</span><br>
-                    <span class="gradient-text">Computer Science</span><br>
-                    <span class="hero-title-line2">Portfolio</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Showcasing innovative solutions, technical expertise, and real-world applications
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <div class="hero-tag" data-reveal>
+                        <span class="pulse"></span>
+                        Open to ML / Data internships &amp; co-op
+                    </div>
+                    <div class="hero-title-row" data-reveal>
+                        <h1 class="hero-title">
+                            Rafiul Alam<br>Khan<em>.</em>
+                        </h1>
+                        <img
+                            class="hero-photo"
+                            src="images/profile.jpg"
+                            alt="Rafiul Alam Khan"
+                            width="352"
+                            height="352"
+                            loading="eager"
+                        >
+                    </div>
+                    <p class="hero-lead" data-reveal>
+                    Computer Science Honors student at the <strong>University of Alberta</strong>,
+                    focused on <strong>machine learning, AI, optimization, and data</strong>.
+                    I build models and data-driven systems that turn messy, real-world problems
+                    into measurable decisions.
                 </p>
-                <div class="hero-buttons">
+                <div class="hero-actions" data-reveal>
                     <a href="#projects" class="btn btn-primary">
-                        <span>View Projects</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
+                        View projects
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    <a href="#contact" class="btn btn-ghost">Get in touch</a>
                 </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Projects</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">6</div>
-                        <div class="stat-label">Roles</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Technologies</div>
-                    </div>
+                <ul class="hero-meta" data-reveal>
+                    <li>
+                        <span class="k">Now</span>
+                        <span class="v">Intern at UAlberta Civil Engineering · Research at Amii</span>
+                    </li>
+                    <li>
+                        <span class="k">Based in</span>
+                        <span class="v">Edmonton, Canada</span>
+                    </li>
+                    <li>
+                        <span class="k">Focus</span>
+                        <span class="v">ML · AI · Optimization · Data</span>
+                    </li>
+                </ul>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <div class="mouse"></div>
-        </div>
-    </section>
+    </header>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="lead">
-                        Computer Science Honors student at the University of Alberta, passionate about solving complex problems through code and building impactful software solutions.
+            <div class="section-head" data-reveal>
+                <span class="eyebrow">About</span>
+                <h2 class="section-title">Turning data into decisions.</h2>
+            </div>
+            <div class="about-grid">
+                <p class="about-lead" data-reveal>
+                    Passionate about machine learning, AI, and optimization. I build
+                    data-driven systems that turn complex problems into measurable outcomes.
+                </p>
+                <div class="about-body" data-reveal>
+                    <p>
+                        I specialize in machine learning, applied AI, and data engineering:
+                        NLP and computer vision, time-series forecasting, and simulation-based
+                        optimization. Alongside the modeling, I've taught 650+ students and led
+                        technical ML workshops, so I can both build a system and explain the reasoning
+                        behind it clearly.
                     </p>
                     <p>
-                        I specialize in full-stack web development, machine learning, and mobile applications. With experience teaching 650+ students, 
-                        leading technical workshops, and building production-ready applications, I bring both technical expertise and strong communication skills 
-                        to every project.
+                        My work ranges from AI-powered applications using Hugging Face models to
+                        financial market analysis with ML and NLP, forecasting pipelines, and
+                        simulation/optimization platforms. The work is grounded in Python, scikit-learn, PySpark,
+                        and the modern data stack. I still ship full-stack and mobile apps when a model
+                        needs a home, but the focus is on the intelligence behind the product.
                     </p>
-                    <p>
-                        My work spans from AI-powered applications using Hugging Face models to financial market analysis platforms, 
-                        demonstrating proficiency in Python, Django, React, Android development, and machine learning. I'm passionate about 
-                        creating solutions that solve real-world problems and deliver measurable impact.
-                    </p>
+                    <div class="about-highlights">
+                        <span>Machine learning</span>
+                        <span>Applied AI</span>
+                        <span>Optimization</span>
+                        <span>Data engineering</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Credentials -->
+    <section id="credentials" class="credentials">
+        <div class="container">
+            <div class="section-head" data-reveal>
+                <span class="eyebrow">Credentials</span>
+                <h2 class="section-title">Recognized for AI &amp; data.</h2>
+                <p class="section-subtitle">Selective programs and formal training that back up the ML and data work.</p>
+            </div>
+            <div class="cred-grid">
+                <a class="cred-card" href="https://www.amii.ca/research-talent/talent-development/ai-career-accelerator" target="_blank" rel="noopener noreferrer" data-reveal>
+                    <div class="cred-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 22l5-3 5 3-1.21-8.11"/></svg>
+                    </div>
+                    <h3>AI Career Accelerator Program (AICAP)</h3>
+                    <div class="cred-issuer">Alberta Machine Intelligence Institute (Amii)</div>
+                    <div class="cred-meta">May 2026 · Early-career AI program</div>
+                    <p class="cred-desc">Part of Amii's professional program for early-career AI and machine-learning talent.</p>
+                    <span class="cred-link">View program
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+                    </span>
+                </a>
+
+                <a class="cred-card" href="https://www.ualberta.ca/en/admissions-programs/embedded-undergraduate-certificates/applied-data-science.html" target="_blank" rel="noopener noreferrer" data-reveal>
+                    <div class="cred-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
+                    </div>
+                    <h3>Certificate in Applied Data Science</h3>
+                    <div class="cred-issuer">University of Alberta</div>
+                    <div class="cred-meta">Analytics · Visualization · ML workflows</div>
+                    <p class="cred-desc">Formal training in applied data science: analytics, visualization, and machine-learning workflows.</p>
+                    <span class="cred-link">View certificate
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
     <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <p class="section-subtitle">Leadership roles, teaching experience, and community involvement demonstrating technical and soft skills</p>
-            
-            <div class="experience-timeline">
-                <!-- TA Position -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Teaching Assistant</h3>
-                        <span class="experience-date">01/2024 – Present</span>
-                    </div>
-                    <div class="experience-company">Department of Computing Science, University of Alberta</div>
-                    <ul class="experience-bullets">
-                        <li>Conducted and graded weekly quizzes for ~200 students; invigilated and marked final exams for 650+ students</li>
-                        <li>Coordinated with 20+ TAs to ensure swift and accurate assessment logistics, demonstrating strong teamwork</li>
-                        <li>Led seminars on fundamentals in Computing Science, including logical reasoning and mathematical induction</li>
-                    </ul>
-                </div>
+            <div class="section-head" data-reveal>
+                <span class="eyebrow">Experience</span>
+                <h2 class="section-title">Research, teaching &amp; community.</h2>
+                <p class="section-subtitle">AI and machine-learning research and teaching, backed by data-focused leadership across the university community.</p>
+            </div>
 
-                <!-- VP Programming SMLB -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Vice President of Programming</h3>
-                        <span class="experience-date">06/2025 – Present</span>
+            <h3 class="exp-group-title" data-reveal><span class="g-idx">01</span> Work Experience</h3>
+            <div class="timeline">
+                <article class="exp-item" data-reveal>
+                    <div class="exp-meta">
+                        <span class="exp-date">May 2026 – Present</span>
+                        <span class="exp-company">Department of Civil Engineering, University of Alberta</span>
+                        <span class="exp-supervisor">Supervised by <a class="exp-link" href="https://apps.ualberta.ca/directory/person/daneshva" target="_blank" rel="noopener noreferrer">Dr. Hossein Daneshvar</a></span>
                     </div>
-                    <div class="experience-company">Students for ML in Business (SMLB), University of Alberta</div>
-                    <ul class="experience-bullets">
-                        <li>Led hands-on ML101 workshop introducing business students to data analytics, regression models, and visualization tools</li>
-                        <li>Developed Python/Colab data pipelines and Power BI/Tableau dashboards demonstrating ETL processes, trend analysis, and KPI tracking</li>
-                        <li>Created educational content bridging machine learning and business strategy, emphasizing forecasting, CRM, and decision optimization</li>
-                    </ul>
-                </div>
+                    <div class="exp-body">
+                        <div class="exp-title-row">
+                            <h3>Data Analysis &amp; Software Research Intern</h3>
+                            <span class="exp-type">Full-time</span>
+                        </div>
+                        <ul>
+                            <li>Collaborate with PCL Constructors on ML-driven rebar extraction from structural drawings</li>
+                            <li>Collaborate with Enbridge to detect pipeline deformations using machine learning</li>
+                            <li>Develop Python-based data analysis and visualization workflows for structural testing and experimental datasets</li>
+                            <li>Build internal GUI-based software for running OpenSeesPy simulations for non-programming researchers</li>
+                            <li>Support software validation and troubleshooting for laboratory research applications</li>
+                        </ul>
+                    </div>
+                </article>
 
-                <!-- Science Councillor -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Science Councillor</h3>
-                        <span class="experience-date">06/2025 – Present</span>
+                <article class="exp-item" data-reveal>
+                    <div class="exp-meta">
+                        <span class="exp-date">May 2026 – Present</span>
+                        <span class="exp-company"><a class="exp-link" href="https://www.movingai.com/" target="_blank" rel="noopener noreferrer">Alberta Machine Intelligence Institute (Amii), Moving AI Lab <span class="ext">↗</span></a></span>
+                        <span class="exp-supervisor">Supervised by <a class="exp-link" href="https://www.amii.ca/people/nathan-sturtevant" target="_blank" rel="noopener noreferrer">Dr. Nathan Sturtevant</a></span>
                     </div>
-                    <div class="experience-company">International Students' Association (ISA), University of Alberta</div>
-                    <ul class="experience-bullets">
-                        <li>Acted as a liaison between international Science students and ISA leadership, responding to inquiries and ensuring timely communication</li>
-                        <li>Supported community initiatives and events by welcoming participants, resolving concerns, and maintaining an inclusive atmosphere</li>
-                    </ul>
-                </div>
+                    <div class="exp-body">
+                        <div class="exp-title-row">
+                            <h3>Research Assistant</h3>
+                            <span class="exp-type">Part-time</span>
+                        </div>
+                        <ul>
+                            <li>Generated Rubik's Cube pattern databases in C++ using A* search and admissible heuristics</li>
+                            <li>Trained CNN models to compress large heuristic tables from exact search-generated labels</li>
+                            <li>Validated label consistency using contradiction checks, node overlap, and closed-list reuse metrics</li>
+                            <li>Compared exact PDB storage with learned neural approximations for heuristic compression</li>
+                        </ul>
+                    </div>
+                </article>
 
-                <!-- Registrar Advisory Committee -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Member, Student Advisory Committee</h3>
-                        <span class="experience-date">09/2023 – 04/2024</span>
+                <article class="exp-item" data-reveal>
+                    <div class="exp-meta">
+                        <span class="exp-date">Jan 2023 – Present</span>
+                        <span class="exp-company">Department of Computing Science, University of Alberta</span>
                     </div>
-                    <div class="experience-company">Office of the Registrar, University of Alberta</div>
-                    <ul class="experience-bullets">
-                        <li>Provide feedback and input on Office of the Registrar activities and initiatives</li>
-                        <li>Indirectly improve student experience through strategic recommendations</li>
-                    </ul>
-                </div>
+                    <div class="exp-body">
+                        <div class="exp-title-row">
+                            <h3>Teaching Assistant — CMPUT 366 (Search &amp; Planning in AI) &amp; CMPUT 272 (Formal Systems &amp; Logic)</h3>
+                            <span class="exp-type">Part-time</span>
+                        </div>
+                        <ul>
+                            <li>Designed test cases for coding assignments accounting for edge cases and varying input sizes</li>
+                            <li>Validated Python implementations by systematically testing correctness across edge cases</li>
+                            <li>Troubleshot and debugged student code by reproducing issues and isolating root causes</li>
+                            <li>Led seminars on foundations of computing science, including logical reasoning, set theory, and mathematical induction</li>
+                            <li>Triaged and prioritized support requests for 650+ students over Slack, email, and in-person sessions</li>
+                            <li>Documented recurring issues and built reusable troubleshooting guides to cut repeated manual support</li>
+                        </ul>
+                    </div>
+                </article>
 
-                <!-- SU Tutor -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>SU Tutor</h3>
-                        <span class="experience-date">01/2023 – Present</span>
+                <article class="exp-item" data-reveal>
+                    <div class="exp-meta">
+                        <span class="exp-date">Jan 2023 – Present</span>
+                        <span class="exp-company">Students' Union, University of Alberta</span>
                     </div>
-                    <div class="experience-company">University of Alberta</div>
-                    <ul class="experience-bullets">
-                        <li>Helped students understand complex concepts by breaking them into simple, easy-to-follow steps</li>
-                        <li>Demonstrated patience, empathy, and clear communication during one-on-one and group sessions</li>
-                        <li>Used Google Docs to prepare helpful study materials and provide asynchronous support</li>
-                    </ul>
-                </div>
+                    <div class="exp-body">
+                        <div class="exp-title-row">
+                            <h3>SU Tutor</h3>
+                        </div>
+                        <ul>
+                            <li>Helped students understand complex concepts by breaking them into simple, easy-to-follow steps</li>
+                            <li>Demonstrated patience, empathy, and clear communication during one-on-one and group sessions</li>
+                            <li>Prepared study materials in Google Docs and provided asynchronous support</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
 
-                <!-- VP Sports BSA -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Vice President of Sports</h3>
-                        <span class="experience-date">05/2025 – 12/2025</span>
+            <h3 class="exp-group-title" data-reveal><span class="g-idx">02</span> Volunteering</h3>
+            <div class="timeline">
+                <a class="exp-item exp-item-link" href="https://www.linkedin.com/company/studentsformachinelearninginbusiness/" target="_blank" rel="noopener noreferrer" data-reveal>
+                    <div class="exp-meta">
+                        <span class="exp-date">Jun 2025 – Present</span>
+                        <span class="exp-company">Students for Machine Learning in Business (SMLB), University of Alberta <span class="ext">↗</span></span>
                     </div>
-                    <div class="experience-company">Bangladesh Student Association, University of Alberta</div>
-                    <ul class="experience-bullets">
-                        <li>Spearheaded the successful reinstatement of the association after a 2-year hiatus by resolving internal governance issues</li>
-                        <li>Fulfilled constitutional amendments required by the Students' Union</li>
-                    </ul>
-                </div>
+                    <div class="exp-body">
+                        <div class="exp-title-row">
+                            <h3>Vice President of Data Science &amp; Programming</h3>
+                        </div>
+                        <ul>
+                            <li>Designed ML and data analysis workshops tailored for non-technical business audiences</li>
+                            <li>Translated complex AI concepts into structured, decision-relevant narratives for diverse student cohorts</li>
+                            <li>Facilitated cross-functional sessions bridging technical content and business strategy</li>
+                            <li>Developed workshop curriculum covering applied ML use cases across finance, operations, and strategy</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a class="exp-item exp-item-link" href="https://www.linkedin.com/company/uaisa/" target="_blank" rel="noopener noreferrer" data-reveal>
+                    <div class="exp-meta">
+                        <span class="exp-date">Jun 2025 – Jun 2026</span>
+                        <span class="exp-company">International Students' Association (ISA), University of Alberta <span class="ext">↗</span></span>
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-title-row">
+                            <h3>Science Councillor</h3>
+                        </div>
+                        <ul>
+                            <li>Represented more than 1,500 students as the International Students' Science Councillor</li>
+                            <li>Led initiatives to maintain a strong relationship between students and the university</li>
+                            <li>Collaborated with student leaders and staff to improve student services and events</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <article class="exp-item" data-reveal>
+                    <div class="exp-meta">
+                        <span class="exp-date">Sep 2023 – Mar 2024</span>
+                        <span class="exp-company">Office of the Registrar's Student Advisory Committee, University of Alberta</span>
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-title-row">
+                            <h3>Member</h3>
+                        </div>
+                        <ul>
+                            <li>Stress-tested university software (LMS) prior to release to students</li>
+                            <li>Identified usability issues and recommended improvements to enhance user experience</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+
+            <h3 class="exp-group-title" data-reveal><span class="g-idx">03</span> Education</h3>
+            <div class="timeline">
+                <article class="exp-item" data-reveal>
+                    <div class="exp-meta">
+                        <span class="exp-date">Sep 2022 – Apr 2027</span>
+                        <span class="exp-company">University of Alberta</span>
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-title-row">
+                            <h3>B.Sc. Computing Science (Honours)</h3>
+                        </div>
+                        <ul>
+                            <li>Honours program with coursework across AI, machine learning, algorithms, and databases</li>
+                        </ul>
+                        <div class="coursework">
+                            <span class="coursework-label">Relevant coursework</span>
+                            <div class="course-tags">
+                                <a class="course-tag" href="https://apps.ualberta.ca/catalogue/course/cmput/267" target="_blank" rel="noopener noreferrer"><b>CMPUT 267</b>Machine Learning I</a>
+                                <a class="course-tag" href="https://apps.ualberta.ca/catalogue/course/cmput/365" target="_blank" rel="noopener noreferrer"><b>CMPUT 365</b>Reinforcement Learning</a>
+                                <a class="course-tag" href="https://apps.ualberta.ca/catalogue/course/cmput/366" target="_blank" rel="noopener noreferrer"><b>CMPUT 366</b>Search &amp; Planning in AI</a>
+                                <a class="course-tag" href="https://apps.ualberta.ca/catalogue/course/cmput/328" target="_blank" rel="noopener noreferrer"><b>CMPUT 328</b>Visual Recognition</a>
+                                <a class="course-tag" href="https://apps.ualberta.ca/catalogue/course/cmput/455" target="_blank" rel="noopener noreferrer"><b>CMPUT 455</b>Search, Knowledge &amp; Simulation</a>
+                                <a class="course-tag" href="https://apps.ualberta.ca/catalogue/course/cmput/355" target="_blank" rel="noopener noreferrer"><b>CMPUT 355</b>Games, Puzzles, Algorithms</a>
+                                <a class="course-tag" href="https://apps.ualberta.ca/catalogue/course/int_d/491" target="_blank" rel="noopener noreferrer"><b>INT D 491</b>Data Science Capstone</a>
+                                <a class="course-tag" href="https://apps.ualberta.ca/catalogue/course/cmput/195" target="_blank" rel="noopener noreferrer"><b>CMPUT 195</b>Principles &amp; Techniques of Data Science</a>
+                                <a class="course-tag" href="https://apps.ualberta.ca/catalogue/course/cmput/291" target="_blank" rel="noopener noreferrer"><b>CMPUT 291</b>File &amp; Database Management</a>
+                                <a class="course-tag" href="https://apps.ualberta.ca/catalogue/course/cmput/272" target="_blank" rel="noopener noreferrer"><b>CMPUT 272</b>Formal Systems &amp; Logic</a>
+                                <a class="course-tag" href="https://apps.ualberta.ca/catalogue/course/phil/120" target="_blank" rel="noopener noreferrer"><b>PHIL 120</b>Symbolic Logic I</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <p class="section-subtitle">Technologies and tools I use to build innovative solutions</p>
+            <div class="section-head" data-reveal>
+                <span class="eyebrow">Skills</span>
+                <h2 class="section-title">A toolkit built for ML &amp; data.</h2>
+                <p class="section-subtitle">The models, frameworks, and platforms I use to build intelligent, data-driven products.</p>
+            </div>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
+                <div class="skill-card" data-reveal>
+                    <h3><span class="idx">01</span> Machine Learning &amp; AI</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Kotlin</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">Gradient Boosting / LightGBM</span>
+                        <span class="skill-tag">Hugging Face Transformers</span>
+                        <span class="skill-tag">PyTorch / CNNs</span>
+                        <span class="skill-tag">spaCy / NLP</span>
+                        <span class="skill-tag">Computer Vision (OpenCV)</span>
+                        <span class="skill-tag">Time Series / Prophet</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Web Development</h3>
+                <div class="skill-card" data-reveal>
+                    <h3><span class="idx">02</span> Search, Reasoning &amp; Optimization</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Django</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Angular</span>
-                        <span class="skill-tag">Spring Boot</span>
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Heuristic Search (A*)</span>
+                        <span class="skill-tag">Pattern Databases</span>
+                        <span class="skill-tag">Admissible Heuristics</span>
+                        <span class="skill-tag">Reinforcement Learning</span>
+                        <span class="skill-tag">Planning &amp; Simulation</span>
+                        <span class="skill-tag">Optimization</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Machine Learning & AI</h3>
+                <div class="skill-card" data-reveal>
+                    <h3><span class="idx">03</span> Data Engineering &amp; Analytics</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Scikit-learn</span>
-                        <span class="skill-tag">Hugging Face</span>
-                        <span class="skill-tag">NLP</span>
-                        <span class="skill-tag">Computer Vision</span>
-                        <span class="skill-tag">Time Series</span>
-                        <span class="skill-tag">Prophet</span>
-                        <span class="skill-tag">Gradient Boosting</span>
+                        <span class="skill-tag">ETL Pipelines</span>
+                        <span class="skill-tag">pandas / NumPy</span>
+                        <span class="skill-tag">GeoPandas</span>
+                        <span class="skill-tag">Feature Engineering</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Data Visualization</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Mobile Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Android</span>
-                        <span class="skill-tag">Gradle</span>
-                        <span class="skill-tag">Event-Driven Architecture</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Databases & Data</h3>
+                <div class="skill-card" data-reveal>
+                    <h3><span class="idx">04</span> Databases</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">SQLAlchemy</span>
                         <span class="skill-tag">Database Design</span>
-                        <span class="skill-tag">ETL Processes</span>
-                        <span class="skill-tag">Power BI</span>
-                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Query Optimization</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
+                <div class="skill-card" data-reveal>
+                    <h3><span class="idx">05</span> Languages</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Jupyter Notebook</span>
-                        <span class="skill-tag">Kafka</span>
-                        <span class="skill-tag">PySpark</span>
-                        <span class="skill-tag">Databricks</span>
-                        <span class="skill-tag">Snowflake</span>
-                        <span class="skill-tag">Railway</span>
-                        <span class="skill-tag">Vercel</span>
-                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-reveal>
+                    <h3><span class="idx">06</span> Backend &amp; Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Django / DRF</span>
+                        <span class="skill-tag">NestJS / Next.js</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js / Express</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Git / GitHub Actions</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Real-world applications showcasing full-stack development, machine learning, and mobile engineering</p>
-            
+            <div class="section-head" data-reveal>
+                <span class="eyebrow">Projects</span>
+                <h2 class="section-title">Selected work.</h2>
+                <p class="section-subtitle">A curated set of machine learning, AI, and data projects, plus the full-stack systems that put them to work. Quality over quantity.</p>
+            </div>
             <div class="projects-grid">
                 <!-- MarketPulse -->
-                <div class="project-card">
+                <article class="project-card" data-reveal>
                     <div class="project-header">
                         <h3>MarketPulse</h3>
                         <div class="project-links">
-                            <a href="https://github.com/rafi-khan-cmd/marketpulse" class="project-icon" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
+                            <a href="https://github.com/rafi-khan-cmd/marketpulse" class="icon-btn" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="MarketPulse on GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                             </a>
                         </div>
                     </div>
-                    <p class="project-description">
-                        Production-ready financial market analysis platform combining macroeconomic data, market indicators, news sentiment analysis, and ML predictions.
-                    </p>
+                    <p class="project-description">End-to-end market analytics platform that pulls macro and market data, engineers features, and combines an ML direction model with transformer-based news NLP.</p>
                     <ul class="project-bullets">
-                        <li>Deployed full-stack Django application with interactive dashboard and real-time data visualization</li>
-                        <li>Integrated multiple data sources: FRED API, Yahoo Finance, and NewsAPI for comprehensive market insights</li>
-                        <li>Implemented machine learning and NLP models for market trend analysis and predictions</li>
-                        <li>Containerized with Docker for scalable deployment on Railway platform</li>
+                        <li>Built an automated ETL pipeline ingesting macro data (FRED API) and market data (Yahoo Finance), engineering labelled features for next-day S&amp;P 500 direction</li>
+                        <li>Trained a scikit-learn model (~62% test accuracy) and ran DistilBERT / DistilBART transformers for headline sentiment and summarization</li>
+                        <li>Served predictions and analytics through a Django REST API with an interactive Chart.js dashboard</li>
+                        <li>Containerized with Docker and deployed on Railway with PostgreSQL</li>
                     </ul>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
+                        <span class="tech-tag">scikit-learn</span>
+                        <span class="tech-tag">Transformers</span>
                         <span class="tech-tag">Django</span>
-                        <span class="tech-tag">Machine Learning</span>
-                        <span class="tech-tag">NLP</span>
                         <span class="tech-tag">Docker</span>
                     </div>
                     <a href="https://marketpulse-production-a407.up.railway.app/dashboard/" class="project-link" target="_blank" rel="noopener noreferrer">
-                        View Live Demo →
+                        View live demo
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
                     </a>
-                </div>
+                </article>
 
-                <!-- NHL Fantasy League -->
-                <div class="project-card">
+                <!-- Edmonton Urban Growth Intelligence -->
+                <article class="project-card" data-reveal>
                     <div class="project-header">
-                        <h3>NHL Fantasy League</h3>
+                        <h3>Edmonton Urban Growth Intelligence</h3>
                         <div class="project-links">
-                            <a href="https://github.com/rafi-khan-cmd/NHLFantasyLeague" class="project-icon" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
+                            <a href="https://github.com/rafi-khan-cmd/Edmonton-Urban-Growth-Intelligence-Dashboard-Open-Data-" class="icon-btn" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="Edmonton Urban Growth Intelligence on GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                             </a>
                         </div>
                     </div>
-                    <p class="project-description">
-                        Full-stack NHL fantasy league application with real-time game updates, league chat, player analytics, and comprehensive league management.
-                    </p>
+                    <p class="project-description">Forecasts next-year new business licences for every Edmonton neighbourhood from City of Edmonton open data, rendered on an interactive map.</p>
                     <ul class="project-bullets">
-                        <li>Built full-stack application with Next.js 14 frontend and NestJS backend with TypeScript</li>
-                        <li>Implemented real-time NHL game score updates and live game details using WebSockets</li>
-                        <li>Developed in-league chat functionality for real-time communication between league members</li>
-                        <li>Created comprehensive player analytics dashboard with statistics tracking and performance metrics</li>
-                        <li>Integrated PostgreSQL for league data and Redis for caching, rate limiting, and pub/sub messaging</li>
-                        <li>Deployed frontend on Vercel and backend on Railway with defensive API design and caching</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">NestJS</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Redis</span>
-                        <span class="tech-tag">WebSockets</span>
-                        <span class="tech-tag">Tailwind CSS</span>
-                        <span class="tech-tag">Zustand</span>
-                    </div>
-                    <a href="https://frontend-b837vvdhy-rafis-projects-31505c3b.vercel.app/register" class="project-link" target="_blank" rel="noopener noreferrer">
-                        View Live Demo →
-                    </a>
-                </div>
-
-                <!-- Supply Chain Digital Twin -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Supply Chain Digital Twin</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/rafi-khan-cmd/supplychainproject" class="project-icon" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Enterprise-grade supply chain simulation and optimization platform enabling scenario building, Monte Carlo simulations, and cost/service impact analysis.
-                    </p>
-                    <ul class="project-bullets">
-                        <li>Built enterprise-grade full-stack application with async job queue architecture for handling long-running simulation tasks</li>
-                        <li>Implemented Monte Carlo simulation engine for large-scale scenario analysis and forecasting</li>
-                        <li>Developed scenario builder with enterprise-style forms and side-by-side comparison dashboard for cost/service impact analysis</li>
-                        <li>Configured real-time event streaming for live shipment and production event processing</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span class="tech-tag">Angular</span>
-                        <span class="tech-tag">Spring Boot</span>
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">PySpark</span>
-                        <span class="tech-tag">Databricks</span>
-                        <span class="tech-tag">Snowflake</span>
-                        <span class="tech-tag">Kafka</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Kubernetes</span>
-                    </div>
-                </div>
-
-                <!-- AI Resume Reviewer -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>AI Resume Reviewer</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/rafi-khan-cmd/ai-resume-reviewer" class="project-icon" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        AI-powered web application providing real-time feedback on resume content using Hugging Face's zero-shot classification model.
-                    </p>
-                    <ul class="project-bullets">
-                        <li>Built full-stack application with Django REST API backend and React frontend</li>
-                        <li>Integrated Hugging Face's facebook/bart-large-mnli model for zero-shot classification</li>
-                        <li>Delivers real-time resume analysis with instant feedback on strengths and weaknesses</li>
-                        <li>Supports both full resume and individual bullet point analysis for comprehensive review</li>
+                        <li>Built an offline geospatial pipeline joining business, permit, and zoning open data with GeoPandas</li>
+                        <li>Trained a LightGBM model on a strict time-based split (year <em>t</em> features → licences in <em>t+1</em>, no leakage) against a lag baseline</li>
+                        <li>Reported MAE, RMSE, and Top-K ranking overlap in a model card; engineered emergence and growth-acceleration scores</li>
+                        <li>Automated data fetch, training, and static deployment via GitHub Actions to GitHub Pages</li>
                     </ul>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Django</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Hugging Face</span>
+                        <span class="tech-tag">LightGBM</span>
+                        <span class="tech-tag">GeoPandas</span>
+                        <span class="tech-tag">GitHub Actions</span>
+                        <span class="tech-tag">Leaflet</span>
                     </div>
-                </div>
+                    <a href="https://rafi-khan-cmd.github.io/Edmonton-Urban-Growth-Intelligence-Dashboard-Open-Data-/" class="project-link" target="_blank" rel="noopener noreferrer">
+                        View live dashboard
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+                    </a>
+                </article>
 
                 <!-- Walmart Sales Forecasting -->
-                <div class="project-card">
+                <article class="project-card" data-reveal>
                     <div class="project-header">
                         <h3>Walmart Sales Forecasting</h3>
                         <div class="project-links">
-                            <a href="https://github.com/rafi-khan-cmd/Walmart-Sales-Forecasting" class="project-icon" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
+                            <a href="https://github.com/rafi-khan-cmd/Walmart-Sales-Forecasting" class="icon-btn" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="Walmart Sales Forecasting on GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                             </a>
                         </div>
                     </div>
-                    <p class="project-description">
-                        Advanced time series forecasting project predicting Walmart's weekly sales with exceptional accuracy using multiple ML approaches.
-                    </p>
+                    <p class="project-description">Time series forecasting of Walmart weekly sales, benchmarking a classical forecaster against a gradient-boosted model on a time-based split.</p>
                     <ul class="project-bullets">
-                        <li>Achieved exceptional R² score of 0.99 with Gradient Boosting Regressor model</li>
-                        <li>Implemented Facebook Prophet for time series forecasting with advanced seasonality handling</li>
-                        <li>Created comprehensive exploratory data analysis with interactive Power BI dashboard</li>
-                        <li>Delivered visual forecast plots and detailed performance metrics comparison</li>
+                        <li>Engineered lag, calendar, and store/department features from historical weekly sales</li>
+                        <li>Benchmarked Facebook Prophet against a Gradient Boosting Regressor using a time-based train/test split</li>
+                        <li>Analyzed seasonality, holiday, and markdown effects through exploratory data analysis</li>
+                        <li>Visualized forecasts and compared models with error metrics and a Power BI dashboard</li>
                     </ul>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
@@ -435,23 +520,45 @@
                         <span class="tech-tag">Gradient Boosting</span>
                         <span class="tech-tag">Power BI</span>
                     </div>
-                </div>
+                </article>
 
-                <!-- Tree Crown Clustering -->
-                <div class="project-card">
+                <!-- Academic Rankings Intelligence Platform -->
+                <article class="project-card" data-reveal>
                     <div class="project-header">
-                        <h3>Tree Crown Clustering</h3>
+                        <h3>Academic Rankings Intelligence Platform</h3>
                         <div class="project-links">
-                            <a href="https://github.com/rafi-khan-cmd/tree-crown-clustering" class="project-icon" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
+                            <a href="https://github.com/rafi-khan-cmd/academic-ranking-analytics-platform" class="icon-btn" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="Academic Rankings Intelligence Platform on GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                             </a>
                         </div>
                     </div>
-                    <p class="project-description">
-                        Unsupervised clustering of tree crowns from aerial imagery using color histograms and K-Means algorithm on NEON dataset.
-                    </p>
+                    <p class="project-description">Analytics platform that reconstructs and stress-tests global university ranking methodologies from raw research indicators.</p>
+                    <ul class="project-bullets">
+                        <li>Built an end-to-end ETL pipeline ingesting the OpenAlex API, resolving entities, and engineering normalized indicators</li>
+                        <li>Designed a PostgreSQL analytics schema and a configurable weighting engine to simulate ranking methodologies</li>
+                        <li>Added analytics: feature importance, clustering institutions into research archetypes, and weight-sensitivity analysis</li>
+                        <li>Delivered an interactive Streamlit dashboard for methodology exploration and institution comparison</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">SQLAlchemy</span>
+                        <span class="tech-tag">scikit-learn</span>
+                        <span class="tech-tag">Streamlit</span>
+                    </div>
+                </article>
+
+                <!-- Tree Crown Clustering -->
+                <article class="project-card" data-reveal>
+                    <div class="project-header">
+                        <h3>Tree Crown Clustering</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/rafi-khan-cmd/tree-crown-clustering" class="icon-btn" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="Tree Crown Clustering on GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">Unsupervised clustering of tree crowns from aerial imagery using color histograms and the K-Means algorithm on the NEON dataset.</p>
                     <ul class="project-bullets">
                         <li>Computer vision pipeline for tree crown detection and clustering from RGB aerial imagery</li>
                         <li>Feature extraction using HSV color histograms from bounding box annotations</li>
@@ -464,182 +571,165 @@
                         <span class="tech-tag">K-Means</span>
                         <span class="tech-tag">Jupyter Notebook</span>
                     </div>
-                </div>
+                </article>
 
-                <!-- Income Classification -->
-                <div class="project-card">
+                <!-- EmailToTask -->
+                <article class="project-card" data-reveal>
                     <div class="project-header">
-                        <h3>Income Classification</h3>
+                        <h3>EmailToTask</h3>
                         <div class="project-links">
-                            <a href="https://github.com/rafi-khan-cmd/Income-Classification" class="project-icon" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
+                            <a href="https://github.com/rafi-khan-cmd/EmailToTask" class="icon-btn" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="EmailToTask on GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                             </a>
                         </div>
                     </div>
-                    <p class="project-description">
-                        Machine learning classification project for income prediction using various algorithms and data preprocessing techniques.
-                    </p>
+                    <p class="project-description">NLP pipeline that turns raw emails into structured, prioritized tasks with a human-in-the-loop review queue for low-confidence extractions.</p>
                     <ul class="project-bullets">
-                        <li>Data preprocessing, feature engineering, and model selection pipeline</li>
-                        <li>Implemented multiple classification algorithms for comparison</li>
-                        <li>Comprehensive evaluation metrics and model performance analysis</li>
-                        <li>Jupyter notebook with detailed data exploration and visualization</li>
+                        <li>Designed a modular extractor interface with swappable rule-based and spaCy dependency-parsing engines</li>
+                        <li>Extracted task title, deadline, and priority with confidence scoring and dateparser-based date normalization</li>
+                        <li>Persisted results to SQLite through a repository layer with filtering, overdue, and metrics logic</li>
+                        <li>Built a Streamlit UI with a review queue to correct extractions that fall below a confidence threshold</li>
                     </ul>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Machine Learning</span>
-                        <span class="tech-tag">Classification</span>
-                        <span class="tech-tag">Jupyter Notebook</span>
+                        <span class="tech-tag">spaCy</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">SQLite</span>
                     </div>
-                </div>
+                </article>
 
-                <!-- SQL Project 1 -->
-                <div class="project-card">
+                <!-- TicketNow -->
+                <article class="project-card" data-reveal>
                     <div class="project-header">
-                        <h3>Database Management System - Part 1</h3>
+                        <h3>TicketNow</h3>
                         <div class="project-links">
-                            <a href="https://github.com/ualberta-cmput291/w24-mp1-can-t-wait-for-the-sql-1" class="project-icon" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
+                            <a href="https://github.com/rafi-khan-cmd/TicketNow" class="icon-btn" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="TicketNow on GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                             </a>
                         </div>
                     </div>
-                    <p class="project-description">
-                        Database management system project focusing on SQL queries, database design, and data manipulation for a real-world application scenario.
-                    </p>
+                    <p class="project-description">Full-stack IT service-management (ITSM) app with an SLA and priority-matrix engine, built on hand-written parameterized SQL.</p>
                     <ul class="project-bullets">
-                        <li>Complex SQL queries including joins, subqueries, and aggregations</li>
-                        <li>Database schema design and normalization techniques</li>
-                        <li>Data insertion, updates, and transaction management</li>
-                        <li>Group collaboration on database architecture and query optimization</li>
+                        <li>Built a React + Express/PostgreSQL ticketing system with an impact/urgency → priority matrix and computed SLA due dates</li>
+                        <li>Wrote parameterized SQL with filtered aggregations and SLA-breach computed columns (no ORM)</li>
+                        <li>Implemented agent assignment, role-based access control, status-history auditing, and an asset registry</li>
+                        <li>Added a knowledge base with tag-based article suggestions and an analytics dashboard</li>
                     </ul>
                     <div class="project-tech">
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Database Design</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
                         <span class="tech-tag">PostgreSQL</span>
-                    </div>
-                </div>
-
-                <!-- SQL Project 2 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Database Management System - Part 2</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/ualberta-cmput291/w24-mp1-can-t-wait-for-the-sql-2" class="project-icon" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Advanced database project building upon Part 1, implementing advanced SQL features, stored procedures, and database optimization techniques.
-                    </p>
-                    <ul class="project-bullets">
-                        <li>Advanced SQL features including views, triggers, and stored procedures</li>
-                        <li>Query optimization and performance tuning</li>
-                        <li>Complex data relationships and referential integrity constraints</li>
-                        <li>Team-based development with version control and collaboration</li>
-                    </ul>
-                    <div class="project-tech">
                         <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Stored Procedures</span>
-                        <span class="tech-tag">Database Optimization</span>
+                    </div>
+                    <a href="https://ticket-now-client.vercel.app" class="project-link" target="_blank" rel="noopener noreferrer">
+                        View live demo
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+                    </a>
+                </article>
+
+                <!-- NHL Fantasy League -->
+                <article class="project-card" data-reveal>
+                    <div class="project-header">
+                        <h3>NHL Fantasy League</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/rafi-khan-cmd/NHLFantasyLeague" class="icon-btn" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="NHL Fantasy League on GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">Solo-built full-stack fantasy hockey platform with a live scoring engine driven by the public NHL play-by-play API.</p>
+                    <ul class="project-bullets">
+                        <li>Built a Next.js 14 + NestJS/TypeScript app with leagues, drafts, rosters, trades, and waivers</li>
+                        <li>Engineered an idempotent live-scoring engine polling NHL play-by-play/boxscore data with event de-duplication</li>
+                        <li>Added an analytics layer: points-per-dollar efficiency, VORP, and projected standings</li>
+                        <li>Used PostgreSQL (TypeORM migrations) with Redis pub/sub for real-time WebSocket updates</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">NestJS</span>
                         <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">WebSockets</span>
                     </div>
-                </div>
-
-                <!-- ShowSearchApp -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>ShowSearchApp</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/rafi-khan-cmd2/ShowSearchApp" class="project-icon" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Android application for searching and displaying show information, built with Kotlin and modern Android development practices.
-                    </p>
-                    <ul class="project-bullets">
-                        <li>Native Android app developed in Kotlin with Gradle build system</li>
-                        <li>Network layer implementation for API integration and data fetching</li>
-                        <li>Modern Android architecture with proper separation of concerns</li>
-                        <li>User interface for searching and displaying show information</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span class="tech-tag">Kotlin</span>
-                        <span class="tech-tag">Android</span>
-                        <span class="tech-tag">Gradle</span>
-                        <span class="tech-tag">Mobile Development</span>
-                    </div>
-                </div>
-
-                <!-- Gengar Draw -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Gengar Draw</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/CMPUT301F24gengar/gengar-draw" class="project-icon" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Collaborative Android drawing application built with Java, featuring real-time drawing capabilities and event-driven architecture.
-                    </p>
-                    <ul class="project-bullets">
-                        <li>Native Android application developed in Java with Gradle build system</li>
-                        <li>Event-driven architecture for handling user interactions and drawing events</li>
-                        <li>Collaborative group project demonstrating software engineering practices</li>
-                        <li>Interactive drawing interface with touch-based input handling</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Android</span>
-                        <span class="tech-tag">Gradle</span>
-                        <span class="tech-tag">Event-Driven</span>
-                    </div>
-                </div>
+                    <a href="https://frontend-b837vvdhy-rafis-projects-31505c3b.vercel.app/register" class="project-link" target="_blank" rel="noopener noreferrer">
+                        View live demo
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+                    </a>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Interests -->
+    <section id="interests" class="interests">
+        <div class="container">
+            <div class="section-head" data-reveal>
+                <span class="eyebrow">Beyond the work</span>
+                <h2 class="section-title">A bit more about me.</h2>
+                <p class="section-subtitle">The competitive streak and curiosity carry over from the field to the codebase.</p>
+            </div>
+            <div class="interests-grid">
+                <article class="interest-card" data-reveal>
+                    <div class="interest-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 22l5-3 5 3-1.21-8.11"/></svg>
+                    </div>
+                    <h3>Cricket</h3>
+                    <p>Represented Bangladesh at the U14 &amp; U16 level, and still play casually whenever I get the chance.</p>
+                </article>
+
+                <article class="interest-card" data-reveal>
+                    <div class="interest-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="20" x2="6" y2="14"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="18" y1="20" x2="18" y2="10"/></svg>
+                    </div>
+                    <h3>Hockey</h3>
+                    <p>An avid NHL watcher. The dive into hockey stats and matchups is exactly what sparked my NHL Fantasy League project.</p>
+                </article>
+
+                <article class="interest-card" data-reveal>
+                    <div class="interest-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    </div>
+                    <h3>Badminton</h3>
+                    <p>Recently picked up the racket and steadily leveling up. I like being a beginner again; it keeps the learning muscle sharp.</p>
+                </article>
+
+                <article class="interest-card" data-reveal>
+                    <div class="interest-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3>Sitcoms</h3>
+                    <p>A dedicated sitcom watcher. Great writing is its own kind of engineering. Currently on a <em>Superstore</em> kick.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Open to internships, co-op opportunities, and full-time positions. Let's build something great together.</p>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <a href="mailto:alamkhanrafiul@gmail.com">alamkhanrafiul@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        <a href="https://github.com/rafi-khan-cmd" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    </div>
-                    <div class="contact-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                        <a href="https://www.linkedin.com/in/rafiul-alam-k-3a20392b0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    </div>
-                </div>
+            <div class="section-head" data-reveal>
+                <span class="eyebrow">Contact</span>
+            </div>
+            <p class="contact-cta" data-reveal>
+                Open to ML, data, and research internships and co-op.
+                Let's <a href="mailto:alamkhanrafiul@gmail.com?subject=Hello%20Rafiul">build something intelligent</a> together.
+            </p>
+            <div class="contact-socials">
+                <a href="mailto:alamkhanrafiul@gmail.com?subject=Hello%20Rafiul" class="social-link" data-reveal>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    alamkhanrafiul@gmail.com
+                </a>
+                <a href="https://github.com/rafi-khan-cmd" target="_blank" rel="noopener noreferrer" class="social-link" data-reveal>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/rafiul-alam-k-3a20392b0/" target="_blank" rel="noopener noreferrer" class="social-link" data-reveal>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                </a>
             </div>
         </div>
     </section>
@@ -647,16 +737,11 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Portfolio. Built with attention to detail.</p>
+            <p class="footer-brand">Rafiul Alam Khan</p>
+            <p>&copy; <span id="year">2026</span> — Designed &amp; built with attention to detail.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-<!-- Updated: Wed Dec 17 14:49:33 MST 2025 -->
-<!-- Rebuild trigger: Wed Dec 17 15:39:00 MST 2025 -->
-<!-- Force rebuild: 1766011608 -->
-<!-- Rebuild: Mon Dec 29 17:08:22 MST 2025 -->
-<!-- Rebuild 1767054398 -->
-<!-- Rebuild 20251229174346 -->
